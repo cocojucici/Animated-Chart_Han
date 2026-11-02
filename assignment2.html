@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Assignment 02 · Highlight the Leading Terminal</title><link rel="stylesheet" href="style.css?v=3"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Assignment 02 · Highlight the Leading Terminal</title><link rel="stylesheet" href="style.css?v=4"><style>
+/* Keep the assignment highlight independent of cached shared styles. */
+body.leader-assignment #race rect.leader-bar { stroke: #c93d3d !important; }
+body.leader-assignment .leader-summary { border-left-color: #c93d3d; color: #b52d2d; }
+</style></head>
 <body class="assignment-page leader-assignment" data-assignment="2"><header><a class="brand" href="#">LAX <span>IN MOTION ↗</span></a><nav class="site-tabs" aria-label="Main navigation"><a href="index.html">Terminal chart</a><a href="assignment.html">Assignment <span>01</span></a><a href="assignment2.html" aria-current="page">Assignment <span>02</span></a></nav></header>
 <main><section class="assignment-intro"><p class="eyebrow">WORKSHOP / ASSIGNMENT 02</p><h1>Leading <span>terminal.</span></h1></section>
 <section class="workspace" id="assignment-demo"><form id="filters"><p class="eyebrow">LIVE DEMO / CURRENT MONTH · CURRENT FILTERS</p><div class="fields"><label>Start month<select id="start"></select></label><label>End month<select id="end"></select></label><label>Passenger movement<select id="movement"><option value="All">All · Arrivals + departures</option><option value="Arrival">Arrivals</option><option value="Departure">Departures</option></select></label><label>Travel market<select id="market"><option value="All">All · Domestic + international</option><option>Domestic</option><option>International</option></select></label><button id="apply" class="primary">Apply filters ↗</button></div><p id="pending" hidden>Selection changed. Apply filters to update the chart.</p></form>
